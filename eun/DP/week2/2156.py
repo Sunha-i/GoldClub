@@ -3,7 +3,7 @@
 
 n = int(input())
 wine = []
-d = [0] * n #maximum wight of wine hyoju can drink
+d = [0] * n #maximum weight of wine hyoju can drink
 
 for i in range(n):
     w = int(input()) #weight of each wine
