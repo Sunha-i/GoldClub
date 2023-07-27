@@ -1,4 +1,4 @@
-#László Babai (bronze 1)
+# László Babai (bronze 1)
 
 T = int(input())
 results = ['no'] * T
