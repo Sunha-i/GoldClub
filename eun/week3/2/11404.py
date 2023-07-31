@@ -1,47 +1,27 @@
-n = int(input()) # 도시의 개수
-m = int(input()) # 버스의 개수
+INF = int(1e9)
 
-mincost = [[0] * n for _ in range(n)] # n*n 최소 비용 배열
+# 도시(vertex), 버스(edge) 입력받기
+N = int(input())
+M = int(input())
 
-for bus in range(m):
+# 플로이드-워셜은 2차원 배열이 필요하다.
+graph = [[INF] * (N+1) for _ in range(N+1)]
+
+for i in range(1, N+1):
+    graph[i][i] = 0
+    
+for _ in range(M):
     a, b, c = map(int, input().split())
-    a = a - 1
-    b = b - 1
+    # 더 비용이 적다면 최신화
+    graph[a][b] = min(graph[a][b], c)
 
-    for dep in range(n):
-        for arr in range(n):
-            if (dep == arr):
-                mincost[dep][arr] = 0
-            else:
-                # a -> b 인 경우
-                if (dep == a and arr == b):
-                    if mincost[dep][arr] == 0:
-                        mincost[dep][arr] = c
-                    elif mincost[dep][arr] > c:
-                            mincost[dep][arr] = c
-                # a -> 다른 도착지인 경우
-                elif (dep == a and arr != b):
-                    if mincost[b][arr] != 0:
-                        if mincost[dep][arr] == 0:
-                            mincost[dep][arr] = c + mincost[b][arr]
-                        elif mincost[dep][arr] > c + mincost[b][arr]:
-                                mincost[dep][arr] = c + mincost[b][arr]
-                # 다른 출발지 -> b 인 경우
-                elif (dep != a and arr == b):
-                    if (mincost[dep][a] != 0):
-                        if mincost[dep][arr] == 0:
-                            mincost[dep][arr] = mincost[dep][a] + c
-                        elif mincost[dep][arr] > mincost[dep][a] + c:
-                                mincost[dep][arr] = mincost[dep][a] + c
-                # 다른 출발지 -> 다른 도착지인 경우
-                elif (dep != a and arr != b):
-                    if (mincost[dep][a] != 0 and mincost[b][arr] != 0):
-                        if mincost[dep][arr] == 0:
-                            mincost[dep][arr] = mincost[dep][a] + c + mincost[b][arr]
-                        elif mincost[dep][arr] > mincost[dep][a] + c + mincost[b][arr]:
-                                mincost[dep][arr] = mincost[dep][a] + c + mincost[b][arr]
-
-for i in range(n):
-    for j in range(n):
-        print(mincost[i][j], end=' ')
-    print('\n')
+for k in range(1, N+1):
+    for a in range(1, N+1):
+        for b in range(1, N+1):
+            graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])
+                
+for x in range(1, N+1):
+    for y in range(1, N+1):
+        if graph[x][y] == INF: print(0, end=' ')
+        else: print(graph[x][y], end=' ')
+    print()
