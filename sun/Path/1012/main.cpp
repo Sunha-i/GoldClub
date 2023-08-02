@@ -6,12 +6,13 @@
 //
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
 int M, N, K;
 bool vstd[50][50];
-int farm[50][50] = {0,};
+int farm[50][50];
 
 int dx[4] = {-1, 1, 0, 0};
 int dy[4] = {0, 0, -1, 1};
@@ -40,11 +41,13 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < T; i++)
     {
         cin >> M >> N >> K;
+        memset(vstd, 0, sizeof(vstd));
+        memset(farm, 0, sizeof(farm));
 
         for (int j = 0; j < K; j++)
         {
             int x, y;
-            cin >> x >> y;
+            scanf("%d %d", &x, &y);
             farm[y][x] = 1;
         }
         
@@ -59,11 +62,11 @@ int main(int argc, const char * argv[]) {
                 }
             }
         }
-        cout << cnt;
-        
-        vstd[50][50] = {0,};
-        farm[50][50] = {0,};
+        printf("%d\n", cnt);
     }
 
     return 0;
 }
+
+// 아이스크림 문제 -> dfs
+// 배열 초기화는 memset으로 해결하자 ~^^

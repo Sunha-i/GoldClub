@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < E; i++)
     {
         int u, v, w;
-        cin >> u >> v >> w;
+        scanf("%d %d %d", &u, &v, &w);
         graph[u].push_back({v,w});
     }
     
@@ -57,10 +57,13 @@ int main(int argc, const char * argv[]) {
     for (int i = 1; i < V+1; i++)
     {
         if (table[i] == INF)
-            cout << "INF\n";
+            printf("INF\n");
         else
-            cout << table[i] << endl;
+            printf("%d\n", table[i]);
     }
     
     return 0;
 }
+
+// 계속 시간초과가 떠서 cin/cout을 scanf/printf로 바꿔주고,
+// endl 또한 "\n"으로 바꿔줬더니 통과한 문제...
