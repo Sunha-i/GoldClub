@@ -40,6 +40,7 @@ def bfs(shark_x,shark_y,size):
                     queue.append((nx,ny,count+1))
 
     fish.sort() #거리,위쪽,왼쪽 우선순위로 정렬
+    
     if fish:
         return [fish[0][1], fish[0][2], fish[0][0]] #위치,거리
     else:

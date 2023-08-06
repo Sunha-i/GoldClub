@@ -4,7 +4,8 @@ sys.setrecursionlimit(10**6) #재귀의 최대깊이 설정
 
 #해당 위치에 배추가 있으면 dfs 수행 후 cnt + 1
 #dfs
-def dfs(x,y):
+def bfs(x,y):
+    
     dx=[0,0,-1,1] #상,하,좌,우
     dy=[1,-1,0,0]
 
