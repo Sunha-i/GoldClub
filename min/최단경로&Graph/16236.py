@@ -22,6 +22,7 @@ def bfs(shark_x,shark_y,size):
     queue.append((shark_x, shark_y, 0))
     visited[shark_x][shark_y] = True
     fish = [] #먹을 수 있는 물고기 리스트
+    min_dist=size*size
 
     while queue:
         x,y,count = queue.popleft()
