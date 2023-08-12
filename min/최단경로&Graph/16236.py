@@ -1,4 +1,5 @@
 from collections import deque
+#런타임 오류
 n=int(input())
 graph=[]
 dx=[-1,1,0,0]
@@ -42,7 +43,7 @@ def bfs(shark_x,shark_y,size):
     fish.sort() #거리,위쪽,왼쪽 우선순위로 정렬
     
     if fish:
-        return [fish[0][1], fish[0][2], fish[0][0]] #위치,거리
+        return [fish[0][1], fish[0][2], fish[0][0]] #가장 거리우선순위가 높은 물고기의 위치,거리
     else:
         return []
 
