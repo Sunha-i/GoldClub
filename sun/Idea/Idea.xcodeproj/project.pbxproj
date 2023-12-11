@@ -11,6 +11,7 @@
 		A44A73302ACAEFF600B584C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A44A732F2ACAEFF600B584C0 /* main.cpp */; };
 		A44ADCC42B25B84B00A42A3E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A44ADCC32B25B84B00A42A3E /* main.cpp */; };
 		A44ADCCF2B25B86800A42A3E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A44ADCCE2B25B86800A42A3E /* main.cpp */; };
+		A44ADCDA2B275A4E00A42A3E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A44ADCD92B275A4E00A42A3E /* main.cpp */; };
 		A4E112862AF7AC88007115CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E112852AF7AC88007115CB /* main.cpp */; };
 		A4E1129C2AF83559007115CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E1129B2AF83559007115CB /* main.cpp */; };
 		A4E4A9672AC349D800164EBD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4A9662AC349D800164EBD /* main.cpp */; };
@@ -48,6 +49,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		A44ADCCA2B25B86800A42A3E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A44ADCD52B275A4E00A42A3E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -121,6 +131,8 @@
 		A44ADCC32B25B84B00A42A3E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A44ADCCC2B25B86800A42A3E /* minmax */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = minmax; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44ADCCE2B25B86800A42A3E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A44ADCD72B275A4E00A42A3E /* kakaoemoticon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kakaoemoticon; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44ADCD92B275A4E00A42A3E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A4E112832AF7AC88007115CB /* 1522 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 1522; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E112852AF7AC88007115CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A4E112992AF83559007115CB /* 1027 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 1027; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +170,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A44ADCC92B25B86800A42A3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44ADCD42B275A4E00A42A3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,6 +260,14 @@
 			path = minmax;
 			sourceTree = "<group>";
 		};
+		A44ADCD82B275A4E00A42A3E /* kakaoemoticon */ = {
+			isa = PBXGroup;
+			children = (
+				A44ADCD92B275A4E00A42A3E /* main.cpp */,
+			);
+			path = kakaoemoticon;
+			sourceTree = "<group>";
+		};
 		A4E112842AF7AC88007115CB /* 1522 */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +297,7 @@
 				A4E1129A2AF83559007115CB /* 1027 */,
 				A44ADCC22B25B84B00A42A3E /* hamburger */,
 				A44ADCCD2B25B86800A42A3E /* minmax */,
+				A44ADCD82B275A4E00A42A3E /* kakaoemoticon */,
 				A4E4A9572AC349C500164EBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,6 +315,7 @@
 				A4E112992AF83559007115CB /* 1027 */,
 				A44ADCC12B25B84B00A42A3E /* hamburger */,
 				A44ADCCC2B25B86800A42A3E /* minmax */,
+				A44ADCD72B275A4E00A42A3E /* kakaoemoticon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,6 +421,23 @@
 			name = minmax;
 			productName = minmax;
 			productReference = A44ADCCC2B25B86800A42A3E /* minmax */;
+			productType = "com.apple.product-type.tool";
+		};
+		A44ADCD62B275A4E00A42A3E /* kakaoemoticon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44ADCDD2B275A4E00A42A3E /* Build configuration list for PBXNativeTarget "kakaoemoticon" */;
+			buildPhases = (
+				A44ADCD32B275A4E00A42A3E /* Sources */,
+				A44ADCD42B275A4E00A42A3E /* Frameworks */,
+				A44ADCD52B275A4E00A42A3E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kakaoemoticon;
+			productName = kakaoemoticon;
+			productReference = A44ADCD72B275A4E00A42A3E /* kakaoemoticon */;
 			productType = "com.apple.product-type.tool";
 		};
 		A4E112822AF7AC88007115CB /* 1522 */ = {
@@ -517,6 +563,9 @@
 					A44ADCCB2B25B86800A42A3E = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					A44ADCD62B275A4E00A42A3E = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					A4E112822AF7AC88007115CB = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -560,6 +609,7 @@
 				A4E112982AF83559007115CB /* 1027 */,
 				A44ADCC02B25B84B00A42A3E /* hamburger */,
 				A44ADCCB2B25B86800A42A3E /* minmax */,
+				A44ADCD62B275A4E00A42A3E /* kakaoemoticon */,
 			);
 		};
 /* End PBXProject section */
@@ -594,6 +644,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44ADCCF2B25B86800A42A3E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44ADCD32B275A4E00A42A3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44ADCDA2B275A4E00A42A3E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +763,22 @@
 			name = Debug;
 		};
 		A44ADCD22B25B86800A42A3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A44ADCDB2B275A4E00A42A3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A44ADCDC2B275A4E00A42A3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -952,6 +1026,15 @@
 			buildConfigurations = (
 				A44ADCD12B25B86800A42A3E /* Debug */,
 				A44ADCD22B25B86800A42A3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A44ADCDD2B275A4E00A42A3E /* Build configuration list for PBXNativeTarget "kakaoemoticon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44ADCDB2B275A4E00A42A3E /* Debug */,
+				A44ADCDC2B275A4E00A42A3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
